@@ -123,12 +123,12 @@ class Users extends Controller{
               // last check if the thre are errors
             if(empty($data["err_email"]) && empty($data["err_password"])){
             
-               // check and set logged in user
+               // check for password
                $loggedInUser = $this->userModel->login($data["email"], $data["password"]);
                 //login looks in the db for the password of the user with that email and compare them
                 if($loggedInUser){// method login return false if email or password does not match , or the user row
                    // create session
-                    $this->createUserSession($loggedInUser);
+                    $this->createUserSession($loggedInUser); // entire user row given as param
                 }else{
                     //rerender the form with error
                     $data["err_password"] = "Password incorrect";
@@ -169,8 +169,5 @@ class Users extends Controller{
         session_destroy();
         redirect("users/login");
     }
-    public function isLoggedIn(){
-        //check for the session for example protected routes
-       return isset($_SESSION["user_id"]);
-    }
+ 
 }

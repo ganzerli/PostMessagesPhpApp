@@ -7,7 +7,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
         <script src="<?php echo URLROOT?>/public/js/main.js" > </script>
-     
-        <footer class="text-center text-light bg-dark mb-none"><h3> this is a footer </h3> </footer>
     </body>
 </html>

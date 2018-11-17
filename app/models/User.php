@@ -59,4 +59,14 @@ class User {
 
         $this->db->execute();
     }
+
+    // find the user by id
+    public function getUserById($id){
+            // prepare the query
+         $this->db->query('SELECT * FROM users WHERE id = :id');
+            //bind the value
+        $this->db->bind(':id',$id);
+        $row = $this->db->single();
+        return $row;
+    }
 }

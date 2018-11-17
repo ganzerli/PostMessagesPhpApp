@@ -29,3 +29,9 @@ function flash($name="", $message="", $class="alert alert-success"){
 
     }
 }
+
+
+ function isLoggedIn(){
+    //check for the session for example protected routes
+    return isset($_SESSION["user_id"]);
+}

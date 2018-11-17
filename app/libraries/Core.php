@@ -41,11 +41,11 @@
         }
 
       // taking the parameters
-      $this->params = $url ? array_values($url) :[];
+      $this->params = $url ? array_values($url) :[]; // if $url array is totally unset is nothing, then praams is []
         //call the class fires the method and gives the othre parameters as args to the method!! 
       call_user_func_array([$this->currentController, $this->currentMethod], $this->params);
-      
-
+    
+        //gets html from all the working of the backend and requires the filewith the view, changing the url.. wow..
     }
 
     public function getUrl(){
